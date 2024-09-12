@@ -44,10 +44,24 @@ public class Test {
 			connection.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
+		};
 		
-
+		UserDTO userDTO = new UserDTO();
+		UserDAO userDAO = new UserDAO();
 		
+		userDAO.selectOne();
+		userDAO.selectAge(22);
+		userDAO.selectNameDpt();
+		
+		System.out.println(userDAO.selectOne());
+		System.out.println(userDAO.selectAge(22));
+		System.out.println(userDAO.selectNameDpt());
+		
+		//너무 없어보이니 메소드를 만들어준다
+//		userDTO.setStudentName("짱구");
+//		userDTO.setStudentAge(22);
+//		userDTO.setDepartmentId("1");
+//		userDTO.setAddressId("1");
 		
 //		userDTO.setAddressPostalCode("12345");
 //		userDTO.setAddressLine1("123서울시강남구");
@@ -65,8 +79,12 @@ public class Test {
 //		userDTO.setDepartmentName("인공지능학");
 //		userDTO.setDepartmentName("정보보호학");
 		
+		
+		//실행
 //		insertAddress("12345", "123서울시강남구", "아파트101");
-		insertDpt("컴퓨터공학");
+//		insertAddress("45678", "456 서울시 동작구", "빌라 202");
+//		insertAddress("56789", "789 서울시 송파구", "주택 305");
+//		insertDpt("컴퓨터공학");
 //		insertDpt("인공지능학");
 //		insertDpt("정보보호학");
 //		insertStu("짱구", 22, "1", "1");
@@ -74,15 +92,8 @@ public class Test {
 //		insertStu("맹구", 20, "1", "1");
 //		insertStu("유리", 22, "3", "3");
 
-		
-		//userDAO.dptData(userDTO);
-		//System.out.println(userDTO);
-//		userDTO.setStudentName("짱구");
-//		userDTO.setStudentAge(22);
-//		userDTO.setDepartmentId("1");
-//		userDTO.setAddressId("1");
-//		
-//		userDAO.stuData(userDTO);
+
+
 		
       
    }
